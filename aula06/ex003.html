@@ -20,9 +20,15 @@
     <p>Já me livrei da maldição ! :)</p>
 
     <script>
-        window.alert('Minha primeira mensagem!');
-        window.confirm('Está gostando de JS?');
-        window.prompt('Qual é seu nome?');
+      var n1 = Number.parseFloat(window.prompt('Digite um número: '));//forçando um tipo
+      var n2 = Number(window.prompt('Digite outro número: ')); //deixando que o JS decida qual o tipo de number ele vai usar
+      var soma = n1 + n2
+
+      //Para string pode ser n.toString() ou String(n)
+      window.alert(`A soma de ${n1} e ${n2} é ${soma}`); //placeholder
+
+      // (number + number) para adição
+      // (string + string) para concatenação
     </script>
 </body>
 </html>
