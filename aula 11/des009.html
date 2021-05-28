@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual sua nacionalidade?</title>
+    <style>
+        img{
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Qual a sua Nacionalidade?</h1>
+    <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    <div id = "res"></div>
+   
+
+    <script>
+
+        function verificar(){
+            let nac = window.document.getElementById('txtnac').value;
+            let resultado = window.document.querySelector('div#res');
+     
+            resultado.innerHTML = `<p>Você mora no(a) <strong>${nac}</strong> .</p>`
+
+            if (nac == 'Brasil'){
+                resultado.innerHTML += `<p>você é <strong>Brasileiro!</strong></p>
+                <img src="https://setcesp.org.br/wp-content/uploads/2019/08/brasil.png" alt="Brasil">`
+            } else {
+                resultado.innerHTML += `<p>você é <strong>Estrangeiro!</strong></p>
+                <img src="https://s5.static.brasilescola.uol.com.br/vestibular/2021/05/estados-unidos-bandeira.jpg">
+                `
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
